@@ -1,0 +1,226 @@
+.animated {
+        -webkit-animation-duration: 170s;
+        animation-duration: 170s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        }
+
+        @-webkit-keyframes hinge {
+        0% {
+            -webkit-transform: rotate(0);
+            transform: rotate(0);
+            -webkit-transform-origin: top left;
+            transform-origin: top left;
+            -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+        }
+
+        20%, 60% {
+            -webkit-transform: rotate(80deg);
+            transform: rotate(80deg);
+            -webkit-transform-origin: top left;
+            transform-origin: top left;
+            -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+        }
+
+        40% {
+            -webkit-transform: rotate(60deg);
+            transform: rotate(60deg);
+            -webkit-transform-origin: top left;
+            transform-origin: top left;
+            -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+        }
+
+        80% {
+            -webkit-transform: rotate(60deg) translateY(0);
+            transform: rotate(60deg) translateY(0);
+            -webkit-transform-origin: top left;
+            transform-origin: top left;
+            -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+            opacity: 1;
+        }
+
+        100% {
+            -webkit-transform: translateY(700px);
+            transform: translateY(700px);
+            opacity: 0;
+        }
+        }
+
+        @keyframes hinge {
+        0% {
+            -webkit-transform: rotate(0);
+            -ms-transform: rotate(0);
+            transform: rotate(0);
+            -webkit-transform-origin: top left;
+            -ms-transform-origin: top left;
+            transform-origin: top left;
+            -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+        }
+
+        20%, 60% {
+            -webkit-transform: rotate(80deg);
+            -ms-transform: rotate(80deg);
+            transform: rotate(80deg);
+            -webkit-transform-origin: top left;
+            -ms-transform-origin: top left;
+            transform-origin: top left;
+            -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+        }
+
+        40% {
+            -webkit-transform: rotate(60deg);
+            -ms-transform: rotate(60deg);
+            transform: rotate(60deg);
+            -webkit-transform-origin: top left;
+            -ms-transform-origin: top left;
+            transform-origin: top left;
+            -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+        }
+
+        80% {
+            -webkit-transform: rotate(60deg) translateY(0);
+            -ms-transform: rotate(60deg) translateY(0);
+            transform: rotate(60deg) translateY(0);
+            -webkit-transform-origin: top left;
+            -ms-transform-origin: top left;
+            transform-origin: top left;
+            -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+            opacity: 1;
+        }
+
+        100% {
+            -webkit-transform: translateY(700px);
+            -ms-transform: translateY(700px);
+            transform: translateY(700px);
+            opacity: 0;
+        }
+        }
+
+        .hinge {
+        -webkit-animation-name: hinge;
+        animation-name: hinge;
+        }
+
+
+        @keyframes hingeright {
+            0% {
+                -webkit-transform: rotate(0);
+                -ms-transform: rotate(0);
+                transform: rotate(0);
+                -webkit-transform-origin: top right;
+                -ms-transform-origin: top right;
+                transform-origin: top right;
+                -webkit-animation-timing-function: ease-in-out;
+                animation-timing-function: ease-in-out;
+            }
+            20%, 60% {
+                -webkit-transform: rotate(-80deg);
+                -ms-transform: rotate(-80deg);
+                transform: rotate(-80deg);
+                -webkit-transform-origin: top right;
+                -ms-transform-origin: top right;
+                transform-origin: top right;
+                -webkit-animation-timing-function: ease-in-out;
+                animation-timing-function: ease-in-out;
+            }
+            40% {
+                -webkit-transform: rotate(-60deg);
+                -ms-transform: rotate(-60deg);
+                transform: rotate(-60deg);
+                -webkit-transform-origin: top right;
+                -ms-transform-origin: top right;
+                transform-origin: top right;
+                -webkit-animation-timing-function: ease-in-out;
+                animation-timing-function: ease-in-out;
+            }
+            80% {
+                -webkit-transform: rotate(-60deg) translateY(0);
+                -ms-transform: rotate(-60deg) translateY(0);
+                transform: rotate(-60deg) translateY(0);
+                -webkit-transform-origin: top right;
+                -ms-transform-origin: top right;
+                transform-origin: top right;
+                -webkit-animation-timing-function: ease-in-out;
+                animation-timing-function: ease-in-out;
+                opacity: 1;
+            }
+            100% {
+                -webkit-transform: translateY(700px);
+                -ms-transform: translateY(700px);
+                transform: translateY(700px);
+                opacity: 0;
+            }
+        }
+
+        .hinge2 {
+            animation-name: hingeright;
+            -webkit-animation-name: hingeright;
+            
+        }
+        .ribbons{
+            position: fixed;
+            top: 0;
+            height: 100%;
+            width: 50%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center 50%;
+        }
+
+        .ribbons.left{
+            left: 0;
+            background-image: url(../images/ribbon-left.png);
+        }
+
+        .ribbons.right{
+            right: 0;
+            background-image: url(../images/ribbon-right.png);
+        }
+
+        .ribbons .target{
+            width: 100px;
+            height: 50px;
+            position: absolute;
+            top: 40%;
+            cursor: url(../images/scissor-on.png), auto
+        }
+
+        .ribbons .target.left{
+            right: 0;
+        }
+
+        .ribbons .target.right{
+            left: 0;
+        }
+
+        .title{
+            text-align: center;
+            width: 100%;
+            position: absolute;
+            bottom: 15%;
+            left: 0
+        }
+
+        body{
+            background-image: url('../images/3.jpeg');
+            background-repeat:no-repeat;
+            background-size:cover;
+            background-position:center;
+            color:#333;
+            font-family:"TKDDoyaldYoungHomeRunScriptroman", Tahoma, Verdana, Arial, sans-serif;
+            font-style:normal;
+            font-weight:normal;
+            font-size: 1.6em;
+            text-align:center;
+            overflow: hidden;
+            letter-spacing: 2px;
+            cursor: url(../images/scissor.png), auto;
+        }

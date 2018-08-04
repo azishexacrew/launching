@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="ribbons left animated"><div class="target left"></div></div>
+    <div class="ribbons right animated"><div class="target right"></div></div>
+    <audio id="audio" src="music.mp3" ></audio>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+<script>
+    var socket = io.connect();
+    socket.on('play', function(){
+       play();
+    });
+    function play(){
+        var audio = document.getElementById("audio");
+        audio.play();
+        $(".ribbons.left").addClass("hinge");
+        $(".ribbons.right").addClass("hinge2");
+        setTimeout(function(){
+            location.href = "https://satu.unmul.ac.id/"
+        },27000)
+    }
+</script>
+<script>
+    $(document).ready(function(){
+        $("<link/>", {
+        rel: "stylesheet",
+        type: "text/css",
+        href: "css/css.css"
+        }).appendTo("head");
+        $(".target").on("click", function(){
+            var audio = document.getElementById("audio");
+            audio.play();
+            $(".ribbons.left").addClass("hinge");
+            $(".ribbons.right").addClass("hinge2");
+            setTimeout(function(){
+                location.href = "https://satu.unmul.ac.id/"
+            },27000)
+        })
+    })
+</script>
+</html>
